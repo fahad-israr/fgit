@@ -1,2 +1,2 @@
-# fgit
-An Open Source Project that delivers super fast git experience.
+# FGit  (Fast Git)
+An Open Source Project that aimed at delivering super fast git experience.
