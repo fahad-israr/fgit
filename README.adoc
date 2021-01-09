@@ -1,13 +1,6 @@
 = FGit  (Fast Git)
 An Open Source Project that aimed at delivering super fast git experience.
 
-:toc:
-:toc-placement!:
-
-[discrete]
-# INDEX
-
-toc::[]
 
 == Intro: The basic Idea
 Look the set of most frequently used git commands that any developer uses:
@@ -57,3 +50,13 @@ Well the above stated are just examples but there are many more things that can 
 No way !! 
 
 fgit will be implemented on top of git and thus all the commands you use with git will work as expected. If you want to write `git add. ,git commit ,git push` then you can definitely do that. Fgit will be just an add on to improve your regular git experience.
+
+== FAQS
+[qanda]
+[qanda]
+Why do we call it FGit ? ::
+  FGit stands for FastGit ...
+
+What is fgit basically? An application or a set of scripts that I need to copy into working directory.::
+    fgit a full-fledged CLI Tool which comes with an installer and thus can be very easily installed on your system.
+ 
