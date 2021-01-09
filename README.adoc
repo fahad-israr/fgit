@@ -2,7 +2,9 @@
 An Open Source Project that aimed at delivering super fast git experience.
 
 
-== Intro: The basic Idea
+== Intro: 
+Fgit is a CLI tool that aims to is implemented on top of git aimed at delivering faster and smarter experience to user.
+=== The basic Idea
 Look the set of most frequently used git commands that any developer uses:
 
 ```
