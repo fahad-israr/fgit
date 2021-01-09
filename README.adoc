@@ -55,7 +55,7 @@ fgit will be implemented on top of git and thus all the commands you use with gi
 [qanda]
 [qanda]
 Why do we call it FGit ? ::
-  FGit stands for FastGit ...
+  FGit stands for FastGit ... The super fast git
 
 What is fgit basically? An application or a set of scripts that I need to copy into working directory.::
     fgit a full-fledged CLI Tool which comes with an installer and thus can be very easily installed on your system.
