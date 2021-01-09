@@ -1,0 +1,51 @@
+= FGit  (Fast Git)
+An Open Source Project that aimed at delivering super fast git experience.
+
+== Intro: The basic Idea
+Look the set of most frequently used git commands that any developer uses:
+
+```
+git add . 
+git commit -m"some commit message"
+git push
+```
+Why to write these commands again and again and also, many other commands like these which we repetitively write as a set? What if you can simply write something like this:
+
+```
+fgit push "some commit msg"   /* This will add ,commit and push */
+
+```
+This is just an Instance of how we can make the dev flow faster.
+
+=== Example 2:
+Consider another instance when you try to push your code without configuring upstream(Normally the first time).
+What does git tell you??
+```
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+```
+What if we can simply prompt the user to with something like this:
+
+```
+Whould you like to push  to current working branch : master ?(Y/N)
+```
+=== Example 3:
+To configure the origin we write something like this: `git remote add orgin http://github.com/user/repository`
+
+To modify the configured origin we write `git remote set-url origin https://github.com/user/another_repo2.git`
+
+What if we can simply write : 
+`fgit set origin https://github.com/user/another_repo2.git` which can add origin if it does not exist and modify if it exists.
+
+=== Example 4:
+People often find it complicated to squash their commits. What if we can simply write `fgit squash` to squash all commits into a single commit and avoid the compications of git rebase .
+
+=== And the Optimization list is endless:
+Well the above stated are just examples but there are many more things that can optimized in git and can be made much smarter. This project aims to figure out those possibilities and make optimizations to them to devliver a faster, smarter and better experince.
+
+=== Will I miss git ?
+No way !! 
+
+fgit will be implemented on top of git and thus all the commands you use with git will work as expected. If you want to write `git add. ,git commit ,git push` then you can definitely do that. Fgit will be just an add on to improve your regular git experience.
