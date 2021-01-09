@@ -1,6 +1,14 @@
 = FGit  (Fast Git)
 An Open Source Project that aimed at delivering super fast git experience.
 
+:toc:
+:toc-placement!:
+
+[discrete]
+# INDEX
+
+toc::[]
+
 == Intro: The basic Idea
 Look the set of most frequently used git commands that any developer uses:
 
