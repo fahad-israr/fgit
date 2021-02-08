@@ -13,14 +13,20 @@ import java.util.Objects;
 import java.io.File;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
+import com.github.lalyos.jfiglet.FigletFont;
 
 public class fgit implements QuarkusApplication {
   @Override
   public int run(String... args) throws Exception {   
     
-    
+    /*
+    //---Printing out fgit banner at start
+    System.out.println(FigletFont.convertOneLine(
+               "FGit "));
+    //System.out.println(banner);
+    */
+    System.out.println("============ FGIT ============");
+    //--- If no argument provided ---
     if(args.length == 0){
         System.out.println("No input provided!!");
         help();
