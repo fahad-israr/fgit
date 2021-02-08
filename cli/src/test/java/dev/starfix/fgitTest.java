@@ -6,7 +6,6 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 
-import static dev.fgit.fgit.validate_url;
 import static dev.fgit.fgit.runCommand;
 
 
