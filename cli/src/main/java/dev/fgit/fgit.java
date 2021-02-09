@@ -33,26 +33,29 @@ public class fgit implements QuarkusApplication {
         return -1;
     }
 
+    //Paths.get(".").toAbsolutePath().normalize().toString()
+    Path directory = Paths.get(".").toAbsolutePath().normalize();
+    System.out.println("Current working directory: "+directory.toString());
+
     //String command = args[0];
     if(args[0].equals("push"))
-    try {
-        //Paths.get(".").toAbsolutePath().normalize().toString()
-        Path directory = Paths.get(".").toAbsolutePath().normalize();
-        System.out.println("Current working directory: "+directory.toString());
+        try {
+            String arguements  = String.join(" ",args);
+            System.out.println(arguements);
+            if(args.length > 1)
+                arguements = arguements.substring(arguements.indexOf(" ")+1);
+            else 
+                arguements = "";
+            push(directory,arguements);
 
-        String arguements  = String.join(" ",args);
-        System.out.println(arguements);
-        if(args.length > 1)
-            arguements = arguements.substring(arguements.indexOf(" ")+1);
-        else 
-            arguements = "";
-        push(directory,arguements);
+            return 0; // Sucess Code
+        } catch(Exception e) {
+            e.printStackTrace();
+            return 10;
+        }
+    else
+        gitFallback(directory,args); // Fallback to default git command
 
-        return 0; // Sucess Code
-    } catch(Exception e) {
-        e.printStackTrace();
-        return 10;
-    }
     return 0; // all went good - no exit code should be set.
 
     
@@ -96,6 +99,17 @@ public static void gitPush(Path directory) throws IOException, InterruptedExcept
     runCommand(directory, "git", "push");
 }
 
+public static void gitFallback(Path directory,String... args) throws IOException, InterruptedException {
+    
+    String [] param = new String[args.length+1];
+    
+    param[0] = "git";
+    
+    for(int i=1;i<param.length;i++)
+        param[i] = args[i-1];
+    
+    runCommand(directory, param);
+}
 
 public static String runCommand(Path directory, String... command) throws IOException, InterruptedException {
     //Function to Run Commands using Process Builder
