@@ -14,6 +14,7 @@ import java.io.File;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import com.github.lalyos.jfiglet.FigletFont;
+import static dev.fgit.banner.displayBanner;
 
 public class fgit implements QuarkusApplication {
   @Override
@@ -25,7 +26,8 @@ public class fgit implements QuarkusApplication {
                "FGit "));
     //System.out.println(banner);
     */
-    System.out.println("============ FGIT ============");
+    
+    displayBanner();
     //--- If no argument provided ---
     if(args.length == 0){
         System.out.println("No input provided!!");
