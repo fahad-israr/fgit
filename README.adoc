@@ -2,7 +2,7 @@
 
 image:https://github.com/fahad-israr/fgit/blob/main/images/fgit_logo.png[Fgit Logo,title="Fgit Logo"]
 
-An Open Source Project that aimed at delivering super fast git experience.
+An Open Source Project  aimed at delivering super fast git experience.
 
 
 == Intro: 
