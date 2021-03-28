@@ -21,10 +21,7 @@ public class fgit implements QuarkusApplication {
   public int run(String... args) throws Exception {   
     
     /*
-    //---Printing out fgit banner at start
-    System.out.println(FigletFont.convertOneLine(
-               "FGit "));
-    //System.out.println(banner);
+    //--- Printing out fgit banner at start ---
     */
     
     displayBanner();
@@ -55,6 +52,8 @@ public class fgit implements QuarkusApplication {
             e.printStackTrace();
             return 10;
         }
+    else if(args[0].equals("help") || args[0].equals("h"))
+        help();
     else
         gitFallback(directory,args); // Fallback to default git command
 
@@ -110,13 +109,17 @@ public static void gitFallback(Path directory,String... args) throws IOException
     for(int i=1;i<param.length;i++)
         param[i] = args[i-1];
     
+    //System.out.println(String.join(" ", param));
+
     runCommand(directory, param);
 }
 
 public static String runCommand(Path directory, String... command) throws IOException, InterruptedException {
     //Function to Run Commands using Process Builder
+    System.out.println(String.join(" ", command));
     Process p=process_runner(directory,command);
     return gobbleStream(p);
+    
 }
 
 public static Process process_runner(Path directory, String... command)throws IOException, InterruptedException{
@@ -132,7 +135,8 @@ public static Process process_runner(Path directory, String... command)throws IO
     int exit = p.waitFor();
 
     if (exit != 0) {
-        throw new AssertionError(String.format("runCommand %s in %s returned %d", Arrays.toString(command), directory, exit));
+        System.out.println("Oops !! You seemed to have entered an Invalid Command");
+        //throw new AssertionError(String.format("runCommand %s in %s returned %d", Arrays.toString(command), directory, exit));
     }
     return p;
 }
@@ -159,8 +163,11 @@ public static String gobbleStream(Process p) throws IOException, InterruptedExce
      System.out.println("-h, --help     Display help/info\n");
      System.out.println("Commands:\n");
      System.out.println("===============================================");
-     System.out.println("   push        Executes add ., commit and push" );
-     System.out.println("   random      not defined currently");
+     System.out.println("   push        Executes add -all, commit and push" );
+     System.out.println("   git_cmd     Any other valid git commands like status,init,log,tag etc");
+     System.out.println("               Learn More about valid git commands here: https://git-scm.com/docs/git");
+     
+
      System.out.println();
  }
 
