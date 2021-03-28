@@ -135,7 +135,7 @@ public static Process process_runner(Path directory, String... command)throws IO
     int exit = p.waitFor();
 
     if (exit != 0) {
-        System.out.println("Oops !! You seemed to have entered an Invalid Command");
+        System.out.println("Oops !! You seemed to have entered an Invalid git Command");
         //throw new AssertionError(String.format("runCommand %s in %s returned %d", Arrays.toString(command), directory, exit));
     }
     return p;
@@ -149,7 +149,9 @@ public static String gobbleStream(Process p) throws IOException, InterruptedExce
     errorGobbler.start();
     int exit = p.waitFor();
     if (exit != 0) {
-        throw new AssertionError(String.format("runCommand returned %d", exit));
+        //throw new AssertionError(String.format("runCommand returned %d", exit));
+        // Incase 
+        System.out.println("Learn More about valid git commands here: https://git-scm.com/docs/git");
     }
     errorGobbler.join();
     outputGobbler.join();
