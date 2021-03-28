@@ -1,3 +1,3 @@
 @echo off
-cd "C:\Users\Public\fgit"
+cd "%programfiles%\fgit"
 fgit.exe %1

@@ -143,8 +143,8 @@ public static Process process_runner(Path directory, String... command)throws IO
 
 
 public static String gobbleStream(Process p) throws IOException, InterruptedException{
-    StreamGobbler errorGobbler = new StreamGobbler(p.getErrorStream(), "E");
-    StreamGobbler outputGobbler = new StreamGobbler(p.getInputStream(), "O");
+    StreamGobbler errorGobbler = new StreamGobbler(p.getErrorStream(), ">> "); //For Error Stream
+    StreamGobbler outputGobbler = new StreamGobbler(p.getInputStream(), " "); // For Output Stream
     outputGobbler.start();
     errorGobbler.start();
     int exit = p.waitFor();
@@ -192,7 +192,7 @@ private static class StreamGobbler extends Thread {
             String line;
 
             while ((line = br.readLine()) != null) {
-                System.out.println(type + "> " + line);
+                System.out.println(type  + line);
                 exec_result+=line;
             }
         } catch (IOException ioe) {
