@@ -1,2 +1,2 @@
-# Protocol Handler for `ide://...` scheme.
-## To register the procol handler clone this directory and then run `./install`
+# Setup for Fgit on Linux
+## To install the fgit download fgit-linux.zip and then run `./install`
