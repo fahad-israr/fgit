@@ -1,4 +1,7 @@
 = FGit  (Fast Git)
+:toc:
+:toc-placement!:
+
 
 image:https://github.com/fahad-israr/fgit/blob/main/images/fgit_logo.png[Fgit Logo,title="Fgit Logo"]
 
