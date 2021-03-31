@@ -78,9 +78,17 @@ fgit will be implemented on top of git and thus all the commands you use with gi
 - Test your install by relaunching the CLI and entering `fgit help`
 
 == Implementation Details (Summary)
-- Native Executable Binary: Development using Command Mode of Quarkus written in Java
-- Testing : Unit Testing with JUNIT5
-- Installer: packaging and setup with Maven Assembly
+=== Native Executable Binary
+
+Development using Command Mode of Quarkus written in Java
+
+=== Testing
+
+Unit Testing with JUNIT5
+
+=== Installer
+
+Installer Packaging and setup with Maven Assembly with auto release mechanism.
 - CI/CD : with Github Actions, to automatically generate assets and installer for all three OS(Linux,Windows and mac) on release.
 - Maintenance: Contribution guidelines would be included in Readme to raise an Issue or Open a Pull Request.
 - Auto trigger setup to be executed on PR to verify the successful build and requirements
