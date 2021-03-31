@@ -57,6 +57,28 @@ No way !!
 
 fgit will be implemented on top of git and thus all the commands you use with git will work as expected. If you want to write `git add. ,git commit ,git push` then you can definitely do that. Fgit will be just an add on to improve your regular git experience.
 
+== Installation
+
+=== Linux
+- Download the `fgit-linux.zip` file from the Latest Release and Extract it.
+- Go to CLI and execute the `install` file : `./install`
+- Test your install by relaunching the CLI and entering `fgit help`
+
+=== Windows
+- Download the `fgit-win64.zip` file from the Latest Release and Extract it.
+- Execute the  `install.cmd` file.
+- Test your install by relaunching the CLI and entering `fgit help`
+
+== Implementation Details (Summary)
+- Native Executable Binary: Development using Command Mode of Quarkus written in Java
+- Testing : Unit Testing with JUNIT5
+- Installer: packaging and setup with Maven Assembly
+- CI/CD : with Github Actions, to automatically generate assets and installer for all three OS(Linux,Windows and mac) on release.
+- Maintenance: Contribution guidelines would be included in Readme to raise an Issue or Open a Pull Request.
+- Auto trigger setup to be executed on PR to verify the successful build and requirements
+- Release: setup with Github Actions and auto release from CLI using tag and release. Installers are given out as a zip file available to download. The user has to simply extract the zip file and run the installer enclosed.
+
+
 == FAQS
 [qanda]
 [qanda]
