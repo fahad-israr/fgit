@@ -7,9 +7,14 @@ image:https://github.com/fahad-israr/fgit/blob/main/images/fgit_logo.png[Fgit Lo
 
 An Open Source Project aimed at delivering super fast git experience.
 
+[discrete]
+# INDEX
+
+toc::[]
 
 == Intro: 
 Fgit is a CLI tool that is implemented on top of git aimed at delivering faster and smarter experience to user.
+
 
 === The basic Idea
 Look at the set of most frequently used git commands that any developer uses:
